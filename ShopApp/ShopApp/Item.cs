@@ -8,10 +8,13 @@ namespace ShopApp
 {
     public class Item
     {
-        public int Price { get; set; }
-        public string ItemName { get; set; }
-        public ItemType ItemType { get; set; }
+        public decimal price { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public ItemType type { get; set; }
+        public int taxPercentage { get; set; }
 
+        
     }
 }
 
@@ -26,3 +29,4 @@ public enum ItemType
     Food = 7,
     Drink = 8,
 }
+

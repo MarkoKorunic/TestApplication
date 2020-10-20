@@ -8,10 +8,22 @@ namespace ShopApp
 {
     public class StartBrowseScreen
     {
-        public List<Item> items { get; set; }
+        
+        
         public void ItemTypeList()
         {
+            var CursorPosition = 0;
+            
+        }
 
+
+        public void CursorMarker(string textLine)
+        {
+            System.Console.BackgroundColor = ConsoleColor.White;
+            System.Console.ForegroundColor = ConsoleColor.Black;
+            System.Console.WriteLine(textLine);
+            System.Console.BackgroundColor = ConsoleColor.Black;
+            System.Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }
