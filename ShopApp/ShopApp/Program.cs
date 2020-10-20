@@ -10,19 +10,24 @@ namespace ShopApp
     {
         static void Main(string[] args)
         {
-            WelcomeScreen();
+            Customer customer = new Customer();
+            customer.customerName = WelcomeScreen();
             StartBrowseScreen browseScreen = new StartBrowseScreen();
 
         }
 
 
-        static void WelcomeScreen()
+        static string WelcomeScreen()
         {
             Console.WriteLine("Hello new customer! Welcome to Aurora's Realm Shop.");
             Console.ReadLine();
             Console.WriteLine("We have a selection of goods available to you at best prices in all Waterdeep.");
             Console.ReadLine();
-            Console.WriteLine("Feel free to browse.");
+            Console.WriteLine("Feel free to browse. May I ask your name?");
+            string name =  Console.ReadLine();
+            name = name.Substring(0, 1).ToUpper() + name.Substring(1).ToLower();
+            Console.WriteLine("Hello {0}. What would you like to buy?", name);
+            return name;
         }
 
         public void ItemTypeList()
