@@ -12,7 +12,7 @@ namespace ShopApp
         
         public void ItemTypeList()
         {
-            var CursorPosition = 0;
+            
             
         }
 
