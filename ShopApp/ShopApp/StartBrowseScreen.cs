@@ -12,7 +12,9 @@ namespace ShopApp
         
         public void ItemTypeList()
         {
-            
+            Console.Clear();
+            Console.WriteLine("Please select which type of item you want to purchase by pressing the number.");
+
             
         }
 
