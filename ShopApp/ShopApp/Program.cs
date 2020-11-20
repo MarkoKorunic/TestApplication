@@ -12,8 +12,11 @@ namespace ShopApp
         {
             Customer customer = new Customer();
             customer.customerName = WelcomeScreen();
+            BrowseScreen browseScreen = new BrowseScreen();
+            browseScreen.customer = customer;
+            browseScreen.ItemTypeList();
             Console.ReadKey();
-            StartBrowseScreen browseScreen = new StartBrowseScreen();
+            
 
         }
 
@@ -27,7 +30,7 @@ namespace ShopApp
                 Console.ReadLine();
                 Console.WriteLine("We have a selection of goods available to you at best prices in all Waterdeep.");
                 Console.ReadLine();
-                Console.WriteLine("Feel free to browse. May I ask your name?");
+                Console.WriteLine("Feel free to browse. May I ask your name?  (Type in your name)");
                 name = Console.ReadLine();
                 name = name.Substring(0, 1).ToUpper() + name.Substring(1).ToLower();
                 Console.WriteLine("Hello {0}. Enjoy your shopping!", name);

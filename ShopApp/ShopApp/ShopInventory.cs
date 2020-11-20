@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShopApp
 {
-    public static class ShopInventory
+    public class ShopInventory
     {
         public static List<Item> Items { get; set; }
         public static List<Item> Weapons { 
@@ -16,14 +16,14 @@ namespace ShopApp
             } 
         }
 
-        public static List<Item> Apparel
+        public List<Item> Apparel
         {
             get
             {
                 return ShopInventory.Items.Where(i => i.type == ItemType.Apparel).ToList();
             }
         }
-        public static List<Item> Potions
+        public List<Item> Potions
         {
             get
             {
@@ -31,35 +31,35 @@ namespace ShopApp
             }
         }
 
-        public static List<Item> Materials
+        public List<Item> Materials
         {
             get
             {
                 return ShopInventory.Items.Where(i => i.type == ItemType.Material).ToList();
             }
         }
-        public static List<Item> Food
+        public List<Item> Food
         {
             get
             {
                 return ShopInventory.Items.Where(i => i.type == ItemType.Food).ToList();
             }
         }
-        public static List<Item> Drink
+        public List<Item> Drink
         {
             get
             {
                 return ShopInventory.Items.Where(i => i.type == ItemType.Drink).ToList();
             }
         }
-        public static List<Item> Trinkets
+        public List<Item> Trinkets
         {
             get
             {
                 return ShopInventory.Items.Where(i => i.type == ItemType.Trinket).ToList();
             }
         }
-        public static List<Item> Books
+        public List<Item> Books
         {
             get
             {
