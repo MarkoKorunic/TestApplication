@@ -14,6 +14,7 @@ namespace ShopApp
             customer.customerName = WelcomeScreen();
             BrowseScreen browseScreen = new BrowseScreen();
             browseScreen.customer = customer;
+            Console.ReadKey();
             browseScreen.ItemTypeList();
             Console.ReadKey();
             

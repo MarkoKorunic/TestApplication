@@ -12,7 +12,9 @@ namespace ShopApp
         public ShopInventory shop { get; set; }
         public void ItemTypeList()
         {
+            
             Console.Clear();
+            Console.WriteLine("Hello " + customer.customerName);
             Console.WriteLine("Please select which type of item you want to purchase by pressing the number.");
             Console.WriteLine("1 = WEAPONS");
             Console.WriteLine("2 = APPAREL");
@@ -22,8 +24,8 @@ namespace ShopApp
             Console.WriteLine("6 = BOOKS");
             Console.WriteLine("7 = FOOD");
             Console.WriteLine("8 = DRINK");
+            var itemSelect = Console.ReadKey();
 
-            
         }
 
 
