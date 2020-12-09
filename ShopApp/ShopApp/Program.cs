@@ -15,6 +15,7 @@ namespace ShopApp
             BrowseScreen browseScreen = new BrowseScreen();
             browseScreen.customer = customer;
             Console.ReadKey();
+            JsonAccess.ShopInventoryLoad();
             browseScreen.ItemTypeList();
             Console.ReadKey();
             
@@ -52,14 +53,7 @@ namespace ShopApp
         }
 
 
-        public void CursorMarker(string textLine)
-        {
-            System.Console.BackgroundColor = ConsoleColor.White;
-            System.Console.ForegroundColor = ConsoleColor.Black;
-            System.Console.WriteLine(textLine);
-            System.Console.BackgroundColor = ConsoleColor.Black;
-            System.Console.ForegroundColor = ConsoleColor.White;
-        }
+       
     }
 }
 

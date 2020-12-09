@@ -3,27 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace ShopApp
 {
-    public class ShopInventory
+    public static class ShopInventory
     {
         public static List<Item> Items { get; set; }
-        public List<Item> Weapons { 
+        public static List<Item> Weapons { 
             get
             {
                 return ShopInventory.Items.Where(i => i.type == ItemType.Weapon).ToList();
             } 
         }
 
-        public List<Item> Apparel
+        public static List<Item> Apparel
         {
             get
             {
                 return ShopInventory.Items.Where(i => i.type == ItemType.Apparel).ToList();
             }
         }
-        public List<Item> Potions
+        public static List<Item> Potions
         {
             get
             {
@@ -32,14 +34,14 @@ namespace ShopApp
         }
              
              
-        public List<Item> Trinkets
+        public static List<Item> Trinkets
         {
             get
             {
                 return ShopInventory.Items.Where(i => i.type == ItemType.Trinket).ToList();
             }
         }
-        public List<Item> Books
+        public static List<Item> Books
         {
             get
             {
