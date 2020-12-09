@@ -10,6 +10,7 @@ namespace ShopApp
 {
     public static class ShopInventory
     {
+        public static List<Customer> Customers { get; set; }
         public static List<Item> Items { get; set; }
         public static List<Item> Weapons { 
             get

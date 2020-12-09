@@ -10,16 +10,19 @@ namespace ShopApp
     {
         static void Main(string[] args)
         {
-            Customer customer = new Customer();
-            customer.customerName = WelcomeScreen();
-            BrowseScreen browseScreen = new BrowseScreen();
-            browseScreen.customer = customer;
-            Console.ReadKey();
-            JsonAccess.ShopInventoryLoad();
-            browseScreen.ItemTypeList();
-            Console.ReadKey();
-            
+            while (true)
+            {
+                Customer customer = new Customer();
+                customer.customerName = WelcomeScreen();
+                BrowseScreen browseScreen = new BrowseScreen();
+                browseScreen.customer = customer;
+                Console.ReadKey();
+                JsonAccess.ShopInventoryLoad();
+                browseScreen.ItemTypeList();
 
+
+
+            }
         }
 
 
