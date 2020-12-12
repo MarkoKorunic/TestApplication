@@ -11,7 +11,7 @@ namespace ShopApp
         public string customerName { get; set; }
         public decimal totalPrice { get; set; }
 
-        public List<Item> customerItems { get; set; }
+        public List<String> customerItems { get; set; }
 
     }
 }

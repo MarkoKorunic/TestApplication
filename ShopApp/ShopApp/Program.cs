@@ -15,10 +15,13 @@ namespace ShopApp
                 Customer customer = new Customer();
                 customer.customerName = WelcomeScreen();
                 BrowseScreen browseScreen = new BrowseScreen();
-                browseScreen.customer = customer;
                 Console.ReadKey();
                 JsonAccess.ShopInventoryLoad();
-                browseScreen.ItemTypeList();
+                browseScreen.ItemTypeList(customer);
+                browseScreen.AddToCart(customer);
+                
+                Console.ReadKey();
+
 
 
 
@@ -37,7 +40,7 @@ namespace ShopApp
                 Console.ReadLine();
                 Console.WriteLine("Feel free to browse. May I ask your name?  (Type in your name)");
                 name = Console.ReadLine();
-                name = name.Substring(0, 1).ToUpper() + name.Substring(1).ToLower();
+                name = name.Substring(0, 1).ToUpper() + name.Substring(1).ToLower().TrimStart().TrimEnd();
                 Console.WriteLine("Hello {0}. Enjoy your shopping!", name);
                 return name;
             }
@@ -49,14 +52,17 @@ namespace ShopApp
             }
         }
 
-        public void ItemTypeList()
-        {
-            Console.WriteLine("Please select type of goods you wish to buy.");
-            
-        }
+        
 
 
-       
+        
+
+
+
+
+
+        
+
     }
 }
 

@@ -8,7 +8,7 @@ namespace ShopApp
 {
     public class Item
     {
-
+        public string itemNumber { get; set; }
         public string name { get; set; }
         public decimal price { get; set; }
         
